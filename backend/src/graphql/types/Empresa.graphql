@@ -1,0 +1,46 @@
+type Empresa {
+	empresa_id: UUID!
+	empresa_ruc: String!
+	empresa_nombre: String!
+	empresa_telefono: String!
+	empresa_email: String!
+	empresa_usuario: String!
+	empresa_password: String!
+	empresa_paginaweb: String!
+	empresa_calleprincipal: String
+	empresa_callesecundaria: String
+	empresa_numero: String
+	empresa_referencia: String
+	privilege: String
+	empresa_active: Boolean!
+	createdAt: Datetime
+	updatedAt: Datetime
+}
+
+type Query {
+	getEmpresas: [Empresa!]
+	getEmpresaData(at: String!): Empresa!
+}
+
+type Mutation {
+	createEmpresa(input: CreateEmpresaInput): Empresa!
+	loginE(input: LoginInputE): iAuthPayloadE!
+}
+input LoginInputE {
+	empresa_usuario: String!
+	empresa_password: String!
+}
+
+type iAuthPayloadE {
+	token: String!
+}
+
+input CreateEmpresaInput {
+	empresa_ruc: String!
+	empresa_nombre: String!
+	empresa_telefono: String!
+	empresa_email: String!
+	empresa_usuario: String!
+	empresa_password: String!
+	empresa_paginaweb: String!
+}

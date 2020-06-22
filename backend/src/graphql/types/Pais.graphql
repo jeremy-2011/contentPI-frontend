@@ -1,0 +1,22 @@
+type Pais {
+  pais_id: UUID!
+  pais_descripcion: String!
+  active: Boolean!
+  createdAt: Datetime!
+  updatedAt: Datetime!
+  provincias: [Provincia!]
+  _DEBUG: JSON
+}
+type Query {
+  getPais: [Pais!]
+  getPaisData(at: String!): Pais!
+}
+
+type Mutation {
+  createPais(input: CreatePaisInput): Pais!
+}
+
+input CreatePaisInput {
+  pais_descripcion: String!
+  active: Boolean!
+}

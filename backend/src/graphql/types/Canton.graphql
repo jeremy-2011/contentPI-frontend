@@ -1,0 +1,22 @@
+type Canton {
+  canton_id: UUID!
+  canton_descripcion: String!
+  active: Boolean!
+  createdAt: Datetime!
+  updatedAt: Datetime!
+  empresas: [Empresa!]
+  _DEBUG: JSON
+}
+type Query {
+  getCanton: [Canton!]
+  getCantonData(at: String!): Canton!
+}
+
+type Mutation {
+  createCanton(input: CreateCantonInput): Canton!
+}
+
+input CreateCantonInput {
+  canton_descripcion: String!
+  active: Boolean!
+}

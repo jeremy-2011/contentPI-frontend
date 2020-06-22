@@ -1,0 +1,33 @@
+@import '~styles/_dependencies';
+
+.modal {
+  p {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+
+    &.center {
+      text-align: center;
+    }
+
+    .saved {
+      color: $mySin;
+      font-weight: 600;
+    }
+
+    .published {
+      color: $mountainMeadow;
+      font-weight: 600;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+
+    &.center {
+      justify-content: space-between;
+    }
+  }
+}

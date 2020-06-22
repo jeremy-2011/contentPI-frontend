@@ -1,0 +1,17 @@
+{
+  "server": {
+    "port": 5000
+  },
+  "db": {
+    "dialect": "postgres",
+    "port": 5432,
+    "host": "localhost",
+    "database": "typescript",
+    "username": "postgres",
+    "password": "sanchez"
+  },
+  "security": {
+    "secretKey": "Gr4pQLCM5",
+    "expiresIn": "7d"
+  }
+}

@@ -1,0 +1,20 @@
+type Value {
+  id: UUID!
+  entry: UUID!
+  value: String!
+}
+
+type Mutation {
+  createValues(input: [CreateValueInput]): [Value!]
+  findUniqueValues(input: [ValueInput]): [Value!]
+}
+
+input ValueInput {
+  value: String!
+}
+
+input CreateValueInput {
+  entry: UUID!
+  value: String!
+  fieldId: UUID!
+}

@@ -1,0 +1,22 @@
+type Provincia {
+  provincia_id: UUID!
+  provincia_descripcion: String!
+  active: Boolean!
+  createdAt: Datetime!
+  updatedAt: Datetime!
+  cantones: [Canton!]
+  _DEBUG: JSON
+}
+type Query {
+  getProvincia: [Provincia!]
+  getProvinciaData(at: String!): Provincia!
+}
+
+type Mutation {
+  createProvincia(input: CreateProvinciaInput): Provincia!
+}
+
+input CreateProvinciaInput {
+  provincia_descripcion: String!
+  active: Boolean!
+}

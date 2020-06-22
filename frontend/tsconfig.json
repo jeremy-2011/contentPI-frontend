@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "esModuleInterop": true,
+    "module": "esnext",
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "sourceMap": false,
+    "target": "es6",
+    "types": ["node", "express"],
+    "typeRoots": ["typings", "../node_modules/@types"],
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "paths": {
+      "@modals/*": ["app/dashboard/components/Modals/*"],
+      "@dashboard/*": ["app/dashboard/*"],
+      "@app/*": ["app/*"],
+      "@config": ["config"],
+      "@constants/*": ["constants/*"],
+      "@contexts/*": ["contexts/*"],
+      "@graphql/*": ["graphql/*"],
+      "@interfaces": ["interfaces"],
+      "@pages/*": ["pages/*"],
+      "@hooks/*": ["shared/lib/hooks/*"],
+      "@lib/*": ["shared/lib/*"],
+      "@layouts/*": ["shared/components/layouts/*"],
+      "@ui/*": ["shared/components/ui/*"],
+      "@shared/*": ["shared/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
