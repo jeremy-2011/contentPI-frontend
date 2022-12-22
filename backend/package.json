@@ -46,7 +46,7 @@
     "dotenv": "^8.2.0",
     "express": "4.17.1",
     "fogg-utils": "2.2.4",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "merge-graphql-schemas-ts": "1.1.4",
     "mysql2": "^2.1.0",
     "pg": "8.2.1",
